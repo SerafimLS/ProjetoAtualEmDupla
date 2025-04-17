@@ -39,7 +39,7 @@ ATA do Projeto:
 
 10/04/2025: Passei o meu Git com todos os ajustes feitos para a minha dupla iniciar. E trocamos ideias sobre o projeto.
 
-12/04/2025: O Nabil me mostrou como esta o processo do site por chamada de video para a gente se comunicar melhor e eu poder vizualisar.
+12/04/2025: O Nabil me mostrou como esta o processo do site por chamada de video para a gente se comunicar melhor e eu poder visualizar.
 
 13/04/2025: Me mandou o que precisa ser feito no projeto dele, vamos marcar uma call para alinharmos alguns pontos que iremos levantando conforme a execução do projeto....
 
