@@ -32,6 +32,25 @@ Participação e criação de grupos criativos: requer login
 
 Login:
 Via Google ou CPF
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cronograma do Projeto – Programação Web
+Período: 03/04/2025 a 15/05/2025
+Dupla: Lucas Serafim e Nabil Saba
+Tema: Plataforma de Conexão com Oficinas de Arte e Grupos Criativos
+
+O que já foi feito:
+
+-Definição do tema do projeto
+-Criação e organização do repositório GitHub
+-Estrutura inicial das páginas (HTML):
+-Página inicial
+-Login
+-Cadastro
+-Aplicação do estilo com cores (azul+roxo) definir cores com o Nabil
+-Criação do menu de navegação com submenu
+-Script de login e cadastro "funcionando"
+-Verificação de idade mínima
+-Começo da documentação e ATA
 
 ATA do Projeto: 
 
@@ -44,39 +63,22 @@ ATA do Projeto:
 13/04/2025: Me mandou o que precisa ser feito no projeto dele, vamos marcar uma call para alinharmos alguns pontos que iremos levantando conforme a execução do projeto....
 
 ../04/2025: A definir......
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Porcentagem do Projeto Concluída (estimativa):
+
+Planejamento e definição: 60%
+
+Interface inicial (HTML/CSS): 80%
+
+Lógica básica de login/cadastro: 50%
+
+Funcionalidades principais do projeto: 30%
+
+Filtro e busca avançada: 0%
+
+Login via CPF: 0%
+
+Integração com eventos reais ou banco de dados (simulado): 0%
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-O meu Site para ser feito. 
-
-# ProjetoAtualEmDupla
-O repositório foi criado em função de disponibilizar o projeto para o acompanhamento com a minha dupla e o professor. 
-Esse repositório está destinado ao projeto Web do 2º Semestre de análise e desenvolvimento de sistemas.
-
-Projeto - Programação Web
-
-03/04/2025
-
-Dupla: Lucas Serafim e Nabil.
-
--Ideias: Lucas Serafim - Projeto de encontrar corridas e grupos de corredores dentro da localidade que deseja.
-
--Os usuários terão acesso à plataforma sem a necessidade de login na parte do calendário (encontrar corredores, necessário login).
-
--Como deve ser:
-
--Tela inicial: - Duas abas, uma focada nos grupos de corridas e outra no calendário de corridas, tendo o mesmo filtro.
-
--para que as pessoas possam visualizar as corridas, essa tela principal poderá mostrar as corridas por regiões.
-
--A plataforma terá filtros(por região, Distância da corrida).
-poderá acessar os detalhes da corrida (Se é gratuita ou paga, quilometragem das corridades, região/ endereço, se existem pratrocinadores/kits da corrida).
-Página de cadastro:
-
--Mostra se já existe um grupo de corredores para aquela corrida, e se não houver permitir que pessoa cadastre um grupo.
--A pessoa pode se informar sobre o calendârio de corridas sem cadastro, mas se quiser criar um grupo, será necessário um cadastro.
--Se ela tiver um cadastro, permitir as corridas como lembretes na agenda do google.
--Permitir o login com o Google ou com o telefone (Código verificação no whatssap). (login com o google para evitar cadastros extensos).
--Se houver login com o telefone, pedir as informações como (Endereço).
--Apelidos gerados para manter os dados do usuário seguros.
--Nível considerado pelo usuário. (corridas).
