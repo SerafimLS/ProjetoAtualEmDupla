@@ -1,35 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belas Artes - Início</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre a Empresa</a></li>
-            
-            <li><a href="#">Contato</a></li>
-
-            <li>
-                <a>Entrar</a>
-                <ul class="submenu">
-                    <li><a href="cadastro.html">Cadastrar</a></li>
-                    <li><a href="#">Login</a></li>
-                </ul>
-            </li>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="#">Sobre a Empresa</a></li>
+      <li><a href="#">Contato</a></li>
+      <li>
+        <a href="#">Entrar</a>
+        <ul class="submenu">
+          <li><a href="cadastro.html">Cadastrar</a></li>
+          <li><a href="login.html">Login</a></li>
         </ul>
-    </nav>
+      </li>
+    </ul>
+  </nav>
 
-    <div class="container-imgs">
-        <div class="img-box" id="Clcarte1"></div>
-        <div class="img-box" id="Clcarte2"></div>
-        <div class="img-box" id="Clcarte3"></div>
+  <header>
+    <h1>Belas Artes</h1>
+    <p>Encontre oficinas de arte e grupos criativos na sua região</p>
+  </header>
+
+  <section class="filtros">
+    <h3>Filtrar resultados</h3>
+    <form id="filterForm">
+      <label for="tipoArte">Tipo de Arte:</label>
+      <select id="tipoArte" name="tipoArte">
+        <option value="">Todos</option>
+        <option value="pintura">Pintura</option>
+        <option value="escultura">Escultura</option>
+        <option value="ceramica">Cerâmica</option>
+        <option value="bordado">Bordado</option>
+        <option value="desenho">Desenho</option>
+      </select>
+
+      <label for="regiao">Região/Bairro:</label>
+      <input type="text" id="regiao" name="regiao" placeholder="Digite a região">
+
+      <label for="custo">Custo:</label>
+      <select id="custo" name="custo">
+        <option value="">Todos</option>
+        <option value="gratuito">Gratuito</option>
+        <option value="pago">Pago</option>
+      </select>
+
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data">
+
+      <label for="horario">Horário:</label>
+      <input type="time" id="horario" name="horario">
+
+      <button type="button" onclick="aplicarFiltro()">Filtrar</button>
+    </form>
+  </section>
+
+  <section class="abas">
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="mudarAba(event, 'oficinas')">Oficinas de Arte</button>
+      <button class="tab-btn" onclick="mudarAba(event, 'grupos')">Grupos Criativos</button>
     </div>
 
-    
+    <div id="oficinas" class="tab-content" style="display: block;">
+      <h2>Oficinas de Arte</h2>
+      <p>Aqui você encontra aulas, workshops e eventos de diversas atividades artísticas.</p>
+      <div class="item">
+        <h3>Workshop de Pintura</h3>
+        <p>Local: Centro Cultural, Bairro X</p>
+      </div>
+    </div>
+
+    <div id="grupos" class="tab-content" style="display: none;">
+      <h2>Grupos Criativos</h2>
+      <p>Veja os grupos de pessoas que se reúnem para praticar e estudar atividades artísticas.</p>
+      <div class="item">
+        <h3>Grupo de Desenho</h3>
+        <p>Local: Biblioteca Municipal, Bairro Y</p>
+      </div>
+      <p class="aviso-login">* Para participar ou criar grupos criativos, você precisa fazer login.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
