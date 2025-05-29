@@ -1,91 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belas Artes - Início</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telas Artes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="TelasArtesOrigin.png" type="image/png"> 
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="#">Sobre a Empresa</a></li>
-      <li><a href="#">Contato</a></li>
-      <li>
-        <a href="#">Entrar</a>
-        <ul class="submenu">
-          <li><a href="cadastro.html">Cadastrar</a></li>
-          <li><a href="login.html">Login</a></li>
+    <nav>
+        <div class="nav-brand">
+            <a href="index.html">Telas Artes</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#secaoOficinas">Oficinas de Arte</a></li>
+            <li><a href="#secaoGrupos">Grupos Criativos</a></li>
+            <li><a href="#sobreAEmpresa">Sobre</a></li> 
+            <li><a href="#contatoInfo">Contato</a></li> 
         </ul>
-      </li>
-    </ul>
-  </nav>
+        <div id="navUserActions">
+            
+        </div>
+    </nav>
 
-  <header>
-    <h1>Belas Artes</h1>
-    <p>Encontre oficinas de arte e grupos criativos na sua região</p>
-  </header>
+    <div id="secaoOficinas" class="container-filtros-eventos">
+        <h2>Nossos Eventos e Oficinas</h2>
+        <div class="filtros">
+            <label for="filtroCusto">Custo:</label>
+            <select id="filtroCusto" onchange="filtrarEventos()">
+                <option value="todos">Todos</option>
+                <option value="gratuito">Gratuito</option>
+                <option value="pago">Pago</option>
+            </select>
 
-  <section class="filtros">
-    <h3>Filtrar resultados</h3>
-    <form id="filterForm">
-      <label for="tipoArte">Tipo de Arte:</label>
-      <select id="tipoArte" name="tipoArte">
-        <option value="">Todos</option>
-        <option value="pintura">Pintura</option>
-        <option value="escultura">Escultura</option>
-        <option value="ceramica">Cerâmica</option>
-        <option value="bordado">Bordado</option>
-        <option value="desenho">Desenho</option>
-      </select>
+            <label for="filtroTipo">Tipo de Arte:</label>
+            <select id="filtroTipo" onchange="filtrarEventos()">
+                <option value="todos">Todos</option>
+                <option value="pintura">Pintura</option>
+                <option value="escultura">Escultura</option>
+                <option value="ceramica">Cerâmica</option>
+                <option value="workshop">Workshop Geral</option>
+            </select>
 
-      <label for="regiao">Região/Bairro:</label>
-      <input type="text" id="regiao" name="regiao" placeholder="Digite a região">
-
-      <label for="custo">Custo:</label>
-      <select id="custo" name="custo">
-        <option value="">Todos</option>
-        <option value="gratuito">Gratuito</option>
-        <option value="pago">Pago</option>
-      </select>
-
-      <label for="data">Data:</label>
-      <input type="date" id="data" name="data">
-
-      <label for="horario">Horário:</label>
-      <input type="time" id="horario" name="horario">
-
-      <button type="button" onclick="aplicarFiltro()">Filtrar</button>
-    </form>
-  </section>
-
-  <section class="abas">
-    <div class="tab-buttons">
-      <button class="tab-btn active" onclick="mudarAba(event, 'oficinas')">Oficinas de Arte</button>
-      <button class="tab-btn" onclick="mudarAba(event, 'grupos')">Grupos Criativos</button>
+            <label for="filtroCEP">CEP:</label>
+            <input type="text" id="filtroCEP" placeholder="Digite o CEP (só números)" maxlength="8" onkeyup="filtrarEventosPorCEP(event)">
+        </div>
+        <div id="listaEventos" class="container-cards-eventos">
+           
+        </div>
     </div>
 
-    <div id="oficinas" class="tab-content" style="display: block;">
-      <h2>Oficinas de Arte</h2>
-      <p>Aqui você encontra aulas, workshops e eventos de diversas atividades artísticas.</p>
-      <div class="item">
-        <h3>Workshop de Pintura</h3>
-        <p>Local: Centro Cultural, Bairro X</p>
-      </div>
+    <div id="secaoGrupos" class="container-placeholder">
+        <h2>Grupos Criativos</h2>
+        <p>Em breve, informações sobre grupos criativos locais!</p>
     </div>
 
-    <div id="grupos" class="tab-content" style="display: none;">
-      <h2>Grupos Criativos</h2>
-      <p>Veja os grupos de pessoas que se reúnem para praticar e estudar atividades artísticas.</p>
-      <div class="item">
-        <h3>Grupo de Desenho</h3>
-        <p>Local: Biblioteca Municipal, Bairro Y</p>
-      </div>
-      <p class="aviso-login">* Para participar ou criar grupos criativos, você precisa fazer login.</p>
+    <div id="sobreAEmpresa" class="container-placeholder">
+        <h2>Sobre "Telas Artes"</h2>
+        <p style="text-align: justify; max-width: 800px; margin: 0 auto 20px auto;">
+            O Projeto se iniciou a menos de um mês atrás com a minha dupla Nabil Saba, tivemos diversos desafios no 
+            caminho mas mudou as rotas dos projetos e implementamos algumas funções diferentes que achamos interessantes
+            e o projeto finalmente esta sendo entregue com excelência.
+        </p>
     </div>
-  </section>
 
-  <script src="script.js"></script>
+    <div id="contatoInfo" class="container-placeholder">
+        <h2>Contato</h2>
+        <p>Adoraríamos ouvir de você! </p>
+        <p><strong>Telefone:</strong> (11) 98765-4321 (Fictício)</p>
+        <p><strong>E-mail:</strong> <a href="mailto:ola@telasartes.art.br">ola@telasartes.art.br</a> (Fictício)</p>
+    </div>
+    
+    {}
+    <div id="eventDetailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="fecharModal()">&times;</span>
+            <h3 id="modalEventName"></h3>
+            <p id="modalEventDescription"></p>
+            <p><strong>Tipo:</strong> <span id="modalEventType"></span></p>
+            <p><strong>Custo:</strong> <span id="modalEventCostValue"></span></p>
+            <p><strong>CEP:</strong> <span id="modalEventCEP"></span></p>
+            <p><strong>Local:</strong> <span id="modalEventPlaceName"></span></p>
+            <p><strong>Endereço:</strong> <span id="modalEventAddress"></span> (Rua, Bairro)</p>
+            <p><strong>Localidade:</strong> <span id="modalEventLocalityCity"></span> - <span id="modalEventUF"></span></p>
+        </div>
+    </div>
+    <section>
+    <script src="script.js"></script>
 </body>
 </html>
+</section>

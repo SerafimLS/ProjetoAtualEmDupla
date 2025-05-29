@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nabil Saba - Login</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="TelasArtesOrigin.png" type="image/png">
 </head>
 <body>
-  <h2>Tela de Login</h2>
-  <form id="loginForm">
-    <div class="login-opcoes">
-      <button type="button" onclick="loginGoogle()">Login com Google</button>
+    <div class="auth-container">
+        <div id="widgetTemperaturaAuth" class="widget-clima-auth">
+            <p></p>
+        </div>
+
+        <h2>Tela de Login</h2>
+        <form>
+            <input type="email" id="loginEmail" placeholder="Digite seu email" required>
+            <input type="password" id="loginSenha" placeholder="Digite sua senha" required>
+            <button type="button" onclick="login()">Entrar</button>
+        </form>
+        <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+        <p><a href="index.html" class="back-to-home-link">Voltar para Início</a></p>
     </div>
-    <hr>
-    <label for="cpfLogin">CPF</label>
-    <input type="text" id="cpfLogin" name="cpfLogin" placeholder="Somente números" required>
-
-    <label for="txtSenhaLogin">Senha</label>
-    <input type="password" id="txtSenhaLogin" name="txtSenhaLogin" required>
-
-    <button type="button" onclick="verificarLogin()">Entrar</button>    
-    <p id="mensagemErro"></p>
-  </form>
-  <p><a href="cadastro.html">Não tem uma conta? Cadastre-se aqui</a></p>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
